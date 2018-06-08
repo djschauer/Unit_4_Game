@@ -19,6 +19,8 @@ var redCrystal = Math.floor(Math.random() * 11 + 1);
 var blueCrystal = Math.floor(Math.random() * 11 + 1);
 var blackCrystal = Math.floor(Math.random() * 11 + 1);
 var greenCrystal = Math.floor(Math.random() * 11 + 1);
+
+var gameOver = false;
 // Assign Crystal buttons
 $("#redCrystal").click(function() {
     playerScore = playerScore + redCrystal;
@@ -111,7 +113,11 @@ function reset() {
     // Reset Score to 0, write to doc
     playerScore = 0;
     $("#playerScore").text(playerScore);
+    gameOver = false;
 }
+
+// EXPERIMENTAL CODE BELOW (Attempting to clean up my buttons)
+
 // Win if statement: Alert Win, up the wins and write to doc, reset game
 // if (playerScore === compNum) {
 //     alert("You Win! Rematch?");
@@ -123,6 +129,25 @@ function reset() {
 //     alert("You Lost! Try again!");
 //     losses++;
 //     reset();
+// }
+
+// if (playerScore >= compNum) {
+//     gameOver = true;
+// }
+
+// if (gameOver) {
+//     console.log("The game is afoot!")
+// }
+// else if (playerScore === compNum) {
+//     alert("You Win! Rematch?");
+//     wins++;
+//     reset();
+//     $("#wins").text("Wins: " + wins);
+// } else { 
+//     alert("You Lost! Try again!");
+//     losses++;
+//     reset();
+//     $("#losses").text("Losses: " + losses);
 // }
 
 
