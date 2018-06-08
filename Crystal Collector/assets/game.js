@@ -100,7 +100,6 @@ if (playerScore > compNum) {
 });
 
 // Game Reset function
-
 function reset() {
     // Pick new random num, write to doc
     compNum = Math.floor(Math.random() * 101 + 19);
@@ -151,6 +150,9 @@ function reset() {
 // }
 
 
-
+// defunct win function
+// function win() {
+//     alert("You Win! Rematch?")
+// }
 
 });
